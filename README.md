@@ -29,7 +29,7 @@ Nosso RASP foi projetado para atuar como uma camada extra de segurança, oferece
 
 LinkedIn dos participantes:
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](www.linkedin.com/in/bruno-eduardo-b44483268)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/bruno-eduardo-b44483268/)
 
 
 
