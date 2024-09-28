@@ -31,13 +31,45 @@ Equipe Yatta:
 
 <div style="display: flex; align-items: center;">
 
-  <img src="images/joao.png" width="100" height="100" style="border-radius: 50%; margin-right: 20px;">
+  <img src="images/imagem_2024-09-28_194850583.png" width="100" height="100" style="border-radius: 50%; margin-right: 20px;">
 
   <div>
-    <strong>João Silva</strong><br>
-    Desenvolvedor Backend<br>
-    LinkedIn: [João no LinkedIn](https://www.linkedin.com/in/joao-silva)
+    <strong>João Pedro Rodrigues Bessa </strong><br>
+    Estudante de Segurança da Informação<br>
+    LinkedIn:(https://www.linkedin.com/in/joão-pedro-rodrigues-bessa-5827b7261/)
   </div>
+
+<div style="display: flex; align-items: center;">
+
+<br>
+
+<div style="display: flex; align-items: center;">
+
+  <img src="images/yuri.jfif" width="100" height="100" style="border-radius: 50%; margin-right: 20px;">
+
+  <div>
+    <strong>Yuri França</strong><br>
+    Estudante de Segurança da Informação<br>
+    LinkedIn:(https://www.linkedin.com/in/yurifranca2022/)
+  </div>
+
+</div>
+
+<br>
+
+<div style="display: flex; align-items: center;">
+
+  <img src="images/maria.png" width="100" height="100" style="border-radius: 50%; margin-right: 20px;">
+
+  <div>
+    <strong>Bruno Eduardo Dias Souza</strong><br>
+    Estudande de Segurança Informação<br>
+    LinkedIn:(https://www.linkedin.com/in/bruno-eduardo-b44483268/)
+  </div>
+
+</div>
+
+
 
 
 
