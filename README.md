@@ -31,7 +31,7 @@ Equipe Yatta:
 
 <div style="display: flex; align-items: center;">
 
-  <img src="images/imagem_2024-09-28_194850583.png" width="100" height="100" style="border-radius: 50%; margin-right: 20px;">
+  <img src="images/bessa.png" width="100" height="100" style="border-radius: 50%; margin-right: 20px;">
 
   <div>
     <strong>João Pedro Rodrigues Bessa </strong><br>
@@ -45,7 +45,7 @@ Equipe Yatta:
 
 <div style="display: flex; align-items: center;">
 
-  <img src="images/yuri.jfif" width="100" height="100" style="border-radius: 50%; margin-right: 20px;">
+  <img src="images/yuri.png" width="100" height="100" style="border-radius: 50%; margin-right: 20px;">
 
   <div>
     <strong>Yuri França</strong><br>
@@ -59,7 +59,7 @@ Equipe Yatta:
 
 <div style="display: flex; align-items: center;">
 
-  <img src="images/fotor-2024092820046.png" width="100" height="100" style="border-radius: 50%; margin-right: 20px;">
+  <img src="images/bruno.png" width="100" height="100" style="border-radius: 50%; margin-right: 20px;">
 
   <div>
     <strong>Bruno Eduardo Dias Souza</strong><br>
