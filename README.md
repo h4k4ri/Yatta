@@ -63,7 +63,7 @@ Equipe Yatta:
 
   <div>
     <strong>Bruno Eduardo Dias Souza</strong><br>
-    Estudande de Segurança Informação<br>
+    Estudante de Segurança Informação<br>
     LinkedIn:(https://www.linkedin.com/in/bruno-eduardo-b44483268/)
   </div>
 
