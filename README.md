@@ -1,3 +1,2 @@
-# Yatta
-### O projeto basicamente consiste em um RASP, o nosso RASP é uma biblioteca que atua fornecendo funções que ajudam que o desenvolvedor para que possa implementar funções para melhorar o nível de segurança da própria aplicação.
-
+Quem somos?
+Nós somos a Yatta, um grupo formado por três estudantes universitários apaixonados por Segurança da Informação. Acreditamos que a segurança cibernética deve ser uma prioridade em um mundo cada vez mais digital, e por isso nos dedicamos ao desenvolvimento de soluções inovadoras para proteger aplicações e dados sensíveis.
