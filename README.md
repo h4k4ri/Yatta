@@ -27,7 +27,7 @@ Nosso RASP foi projetado para atuar como uma camada extra de segurança, oferece
 
 ------------------------------------------------------------------------------------
 
-Equipe Yatta:
+**Equipe Yatta:**
 
 <div style="display: flex; align-items: center;">
 
