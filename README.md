@@ -27,9 +27,17 @@ Nosso RASP foi projetado para atuar como uma camada extra de segurança, oferece
 
 ------------------------------------------------------------------------------------
 
-LinkedIn dos participantes:
+Equipe Yatta:
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/bruno-eduardo-b44483268/)
+<div style="display: flex; align-items: center;">
+
+  <img src="images/joao.png" width="100" height="100" style="border-radius: 50%; margin-right: 20px;">
+
+  <div>
+    <strong>João Silva</strong><br>
+    Desenvolvedor Backend<br>
+    LinkedIn: [João no LinkedIn](https://www.linkedin.com/in/joao-silva)
+  </div>
 
 
 
