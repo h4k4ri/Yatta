@@ -1,13 +1,14 @@
 **Quem somos?** 👨‍💻
 
-Nós somos a Yatta, um grupo formado por três estudantes universitários apaixonados por Segurança da Informação. Acreditamos que a segurança cibernética deve ser uma prioridade em um mundo cada vez mais digital, e por isso nos dedicamos ao desenvolvimento de soluções inovadoras para proteger aplicações e dados sensíveis.
+Nós somos a APT-E404, um grupo formado por três estudantes universitários apaixonados por Segurança da Informação. Acreditamos que a segurança cibernética deve ser uma prioridade em um mundo cada vez mais digital, e por isso nos dedicamos ao desenvolvimento de soluções inovadoras para proteger aplicações e dados sensíveis.
 
 **Nossa origem** 🕵️
 
-A Yatta nasceu no início deste ano, durante um desafio acadêmico proposto pela Hakkai Security em parceria com nossa faculdade. Esse projeto, denominado Challenge, nos colocou à prova para criar uma solução de RASP (Runtime Application Self-Protection), uma tecnologia que atua em tempo real, protegendo aplicações contra ameaças à medida que elas ocorrem.
+A APT-E404 nasceu no início deste ano, durante um desafio acadêmico proposto pela Hakkai Security em parceria com nossa faculdade. Esse projeto, denominado Challenge, nos colocou à prova para criar uma solução de RASP (Runtime Application Self-Protection), uma tecnologia que atua em tempo real, protegendo aplicações contra ameaças à medida que elas ocorrem.
 
 **Nosso projeto** 📝
 
+Solução Yatta
 
 Nosso principal projeto foi o desenvolvimento de um RASP utilizando a linguagem Kotlin, com o Android Studio como ambiente de desenvolvimento. Nossa solução vai além da detecção básica de ameaças, oferecendo múltiplos níveis de proteção. Entre as funcionalidades do nosso software estão:
 
@@ -27,14 +28,14 @@ Nosso RASP foi projetado para atuar como uma camada extra de segurança, oferece
 
 ------------------------------------------------------------------------------------
 
-**Equipe Yatta:**
+**Equipe APT-E404:**
 
 <div style="display: flex; align-items: center;">
 
   <img src="images/bessa.png" width="100" height="100" style="border-radius: 50%; margin-right: 20px;">
 
   <div>
-    <strong>João Pedro Rodrigues Bessa </strong><br>
+    <strong>João Bessa </strong><br>
     Estudante de Segurança da Informação<br>
     LinkedIn:(https://www.linkedin.com/in/joão-pedro-rodrigues-bessa-5827b7261/)
   </div>
