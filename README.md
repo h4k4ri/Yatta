@@ -1,6 +1,10 @@
 
 
 
+
+<img src="images/imagem_2024-09-29_151713850.png" alt="Texto Alternativo" style="width:100px; display: block; margin: 0 auto;">
+
+
 **Quem somos?** 👨‍💻
 
 Nós somos a APT-E404, um grupo formado por três estudantes universitários apaixonados por Segurança da Informação. Acreditamos que a segurança cibernética deve ser uma prioridade em um mundo cada vez mais digital, e por isso nos dedicamos ao desenvolvimento de soluções inovadoras para proteger aplicações e dados sensíveis.
@@ -11,10 +15,7 @@ A APT-E404 nasceu no início deste ano, durante um desafio acadêmico proposto p
 
 **Nosso projeto** 📝
 
-Solução Yatta 
 
-
-<img src="images/imagem_2024-09-29_151713850.png" alt="Texto Alternativo" style="width:100px; float:left; margin-right:10px;">
 
 
 Nosso principal projeto foi o desenvolvimento de um RASP utilizando a linguagem Kotlin, com o Android Studio como ambiente de desenvolvimento. Nossa solução vai além da detecção básica de ameaças, oferecendo múltiplos níveis de proteção. Entre as funcionalidades do nosso software estão:
