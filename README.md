@@ -11,7 +11,11 @@ A APT-E404 nasceu no início deste ano, durante um desafio acadêmico proposto p
 
 **Nosso projeto** 📝
 
-Solução Yatta
+Solução Yatta 
+
+
+<img src="images/imagem_2024-09-29_151713850.png" alt="Texto Alternativo" style="width:100px; float:left; margin-right:10px;">
+
 
 Nosso principal projeto foi o desenvolvimento de um RASP utilizando a linguagem Kotlin, com o Android Studio como ambiente de desenvolvimento. Nossa solução vai além da detecção básica de ameaças, oferecendo múltiplos níveis de proteção. Entre as funcionalidades do nosso software estão:
 
