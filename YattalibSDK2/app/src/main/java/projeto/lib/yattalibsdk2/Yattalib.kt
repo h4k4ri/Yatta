@@ -1,7 +1,10 @@
 package projeto.lib.yattalibsdk2
 
+import android.net.ConnectivityManager
+import android.net.NetworkCapabilities
 import android.content.Context
 import android.os.Build
+import android.util.Log
 import java.io.BufferedReader
 import java.io.File
 import java.io.InputStreamReader
@@ -9,8 +12,8 @@ import java.net.NetworkInterface
 
 public class Yattalib {
 
+    // Verificação de dispositivo rootado unificada
     public fun ehDispositivoRootado(): Boolean {
-        // Verifica a existência de binários de root em locais conhecidos
         val caminhos = arrayOf(
             "/sbin/su", "/system/bin/su", "/system/xbin/su", "/data/local/xbin/su",
             "/data/local/bin/su", "/system/sd/xbin/su", "/system/bin/failsafe/su", "/data/local/su"
@@ -19,19 +22,33 @@ public class Yattalib {
             return true
         }
 
-        // Verifica a execução do comando "su"
         if (executaComando("su")) {
             return true
         }
 
-        // Verifica permissões de root
-        return try {
+        try {
             val process = Runtime.getRuntime().exec("ls /data/")
             val reader = BufferedReader(InputStreamReader(process.inputStream))
             val output = reader.readLine()
-            output != null
+            if (output != null) {
+                return true
+            }
         } catch (e: Exception) {
-            false
+            // Continua para verificar as propriedades de root
+        }
+
+        val propriedades = listOf(
+            "ro.build.tags" to "test-keys",
+            "ro.debuggable" to "1",
+            "ro.secure" to "0"
+        )
+        return propriedades.any { (prop, valorEsperado) ->
+            val valor = try {
+                Runtime.getRuntime().exec("getprop $prop").inputStream.bufferedReader().readLine()
+            } catch (e: Exception) {
+                null
+            }
+            valor == valorEsperado
         }
     }
 
@@ -48,13 +65,27 @@ public class Yattalib {
         }
     }
 
+    // Verificação de uso de VPN
     public fun estaUsandoVPN(context: Context): Boolean {
-        val interfacesDeRede = NetworkInterface.getNetworkInterfaces()
-        return interfacesDeRede.toList().any { it.isUp && it.interfaceAddresses.isNotEmpty() && it.name.contains("tun") }
+        val connectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+
+        // Verifica se a API 23 (Android M) ou superior está disponível
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            val activeNetwork = connectivityManager.activeNetwork ?: return false
+            val networkCapabilities = connectivityManager.getNetworkCapabilities(activeNetwork) ?: return false
+
+            // Verifica se a rede é uma VPN
+            return networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_VPN)
+        } else {
+            // Para versões abaixo da API 23, você pode adicionar uma abordagem alternativa aqui, se necessário
+            // Exemplo: usar NetworkInterface para verificar VPN
+            TODO("API 23 ou superior necessária para verificar VPN")
+        }
     }
 
-    public fun ehEmulador(): Boolean {
-        return listOf(
+    // Verificação de emulador unificada
+    public fun ehEmulador(context: Context): Boolean {
+        val indicadoresDeEmulador = listOf(
             Build.FINGERPRINT.startsWith("generic"),
             Build.FINGERPRINT.startsWith("unknown"),
             Build.MODEL.contains("google_sdk"),
@@ -71,17 +102,59 @@ public class Yattalib {
             Build.HARDWARE == "goldfish",
             Build.HARDWARE == "ranchu",
             Build.HARDWARE == "vbox86"
-        ).any { it }
+        )
+
+        val pacotesEmuladores = listOf(
+            "com.bluestacks.appplayer",
+            "com.bluestacks.settings",
+            "com.android.emulator"
+        )
+
+        val emuladorDetectado = indicadoresDeEmulador.any { it }
+
+        val appEmuladorInstalado = pacotesEmuladores.any { pacote ->
+            try {
+                context.packageManager.getPackageInfo(pacote, 0)
+                true
+            } catch (e: Exception) {
+                false
+            }
+        }
+
+        return emuladorDetectado || appEmuladorInstalado
     }
 
+    // Verificação de modo de depuração
     public fun estaEmModoDebug(context: Context): Boolean {
         return (context.applicationInfo.flags and android.content.pm.ApplicationInfo.FLAG_DEBUGGABLE) != 0
     }
-}
 
-// Simple test class to verify inclusion in classes.jar
-class HelloWorld {
-    fun sayHello(): String {
-        return "Hello, World!"
+    // Verificação de overlay de tela
+    public fun estaUsandoScreenOverlay(context: Context): Boolean {
+        val params = android.view.WindowManager.LayoutParams()
+        return (params.flags and android.view.WindowManager.LayoutParams.FLAG_SECURE) == 0
+    }
+
+    // Verificação de presença do Frida
+    public fun detectaFrida(): Boolean {
+        val fridaProcessos = listOf(
+            "frida-server", "frida-agent", "frida-inject", "gum-js-loop", "libfrida-gadget"
+        )
+
+        val fridaArquivos = listOf(
+            "/system/bin/frida-server", "/system/xbin/frida-server", "/data/local/tmp/frida-server"
+        )
+
+        // Verifica processos do Frida
+        val processoDetectado = fridaProcessos.any { processo ->
+            executaComando("pgrep $processo") || executaComando("pidof $processo")
+        }
+
+        // Verifica arquivos do Frida
+        val arquivoDetectado = fridaArquivos.any { caminho ->
+            File(caminho).exists()
+        }
+
+        return processoDetectado || arquivoDetectado
     }
 }
