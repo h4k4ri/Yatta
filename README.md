@@ -1,7 +1,7 @@
 
 
 <p align="center">
-  <img src="images/imagem_2024-09-29_151713850.png" alt="Texto Alternativo" style="width:400px;">
+  <img src="images/imagem_2024-09-29_151713850.png" alt="Texto Alternativo" style="width:300px;">
 </p>
 
 
